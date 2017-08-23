@@ -1,0 +1,11 @@
+version: 2.0
+jobs:
+  build:
+    docker:
+      - image: kimstebel/idris:1.1.1
+    working_directory: ~/IdrisScript
+    steps:
+      - checkout
+      - run:
+          command: |
+            make
